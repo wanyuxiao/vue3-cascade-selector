@@ -1,8 +1,6 @@
 import { defineComponent, ref, Ref } from 'vue';
 import axios from 'axios';
-import CascadeSelector from './components/CascadeSelector';
-import { Option, Value } from './components/CascadeSelector/index.d';
-import 'vue3-cascade-selector/dist/style.css';
+import CascadeSelector, { Option, Value } from './components/CascadeSelector';
 
 axios.interceptors.response.use(response => {
   return new Promise((resolve, reject) => {

@@ -1,6 +1,10 @@
 import { computed, ComputedRef, defineComponent, onMounted, ref, Ref } from 'vue';
-import { Nodes, Node, Option, Value } from './index.d';
 import './index.less';
+
+type Nodes = Array<{ code: string; name: string; children?: Nodes }>;
+type Node = { code: string; name: string; children?: Nodes };
+export type Option = { code: string; name: string; [key: string]: any };
+export type Value = Nodes;
 
 const MIN_DEPTH = 1;
 
